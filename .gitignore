@@ -21,3 +21,4 @@ habr_parser-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+dets_simple_storage

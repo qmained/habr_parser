@@ -49,9 +49,9 @@ defmodule MyParser do
       |> Enum.filter(fn %{votes: votes, comments: comments} ->
         Integer.parse(votes)
         |> then(fn
-          {int, _} -> int
-          _ -> IO.puts("Error: #{votes}")
-        end) < 0 and
+          {int, _} -> int < 0
+          _ -> false
+        end) and
           comments
           |> Integer.parse()
           |> elem(0) > 10
