@@ -45,6 +45,7 @@ defmodule MyParser do
             |> List.first()
         }
       end)
+      # Фильтрация
       |> Enum.filter(fn %{votes: votes, comments: comments} ->
         Integer.parse(votes)
         |> then(fn
